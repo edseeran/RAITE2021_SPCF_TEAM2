@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Ship;
+use App\Models\Crew;
+use App\Http\Controllers\CrewController;
+use App\Http\Controllers\ShipController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,11 +23,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/', function () {
-    return view('auth/login');
+Route::get('/', function () {
+    return view('login');
 });
 
-Route::group(['middleware' => ['auth']],function() {
-    Route::get('/dashboard','App\Http\Controllers\DashboardController@index')->name
-    ('dashboard');
-});
+
+Route::apiResource('/dashboard','App\Http\Controllers\DashboardController');
+
+Route::apiResource('/ships','App\Http\Controllers\ShipController');
+Route::apiResource('/crews','App\Http\Controllers\CrewController');

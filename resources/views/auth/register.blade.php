@@ -53,8 +53,7 @@
 
                     <option value="" selected disabled>-Choose your role-</option>
                     <option value="admin">Administrator</option>
-                    <option value="professor">Professor</option>
-                    <option value="student">Student</option>    
+                    <option value="crew">Crew Member</option>    
                 </select>
             </div>
 
