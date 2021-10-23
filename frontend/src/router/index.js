@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
 
 const routes = [
     {
@@ -12,10 +11,25 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue")
     },
     {
-        path: "/about",
-        name: "About",
-        component: () => import(/* webpackChunkName: "about" */ "../views/About.vue")
-    }
+        path: "/dashboard",
+        name: "Dashboard",
+        component: () => import(/* webpackChunkName: "dashboard" */ "../views/Dashboard.vue")
+    },
+    {
+        path: "/crew-members",
+        name: "CrewMembers",
+        component: () => import(/* webpackChunkName: "crew-members" */ "../views/CrewMembers.vue")
+    },
+    {
+        path: "/ships",
+        name: "Ships",
+        component: () => import(/* webpackChunkName: "ships" */ "../views/Ships.vue")
+    },
+    {
+        path: "/:catchAll(.*)",
+        name: "NotFound",
+        component: () => import(/* webpackChunkName: "webpack-not-found" */ "../views/NotFound.vue"),
+    },
 ];
 
 const router = createRouter({

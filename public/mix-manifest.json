@@ -1,5 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/home.js": "/js/home.js",
+    "/js/webpack-not-found.js": "/js/webpack-not-found.js",
     "/css/app.css": "/css/app.css",
-    "/js/about.js": "/js/about.js"
+    "/js/Crew.js": "/js/Crew.js",
+    "/js/crew.js": "/js/crew.js",
+    "/js/crew-members.js": "/js/crew-members.js",
+    "/js/ships.js": "/js/ships.js",
+    "/js/dashboard.js": "/js/dashboard.js"
 }

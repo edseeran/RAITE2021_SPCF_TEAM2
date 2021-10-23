@@ -1,0 +1,10 @@
+// Your variable overrides
+$primary: #42b983;
+$secondary: #2c3e50;
+
+$link-color: white;
+$link-hover-color: black;
+$link-decoration: none;
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
